@@ -1,0 +1,15 @@
+FUNCTION Tri_Insertion(VAR T: ARRAY_OF INTEGER) : ARRAY_OF INTEGER
+VAR
+    i,j,elem: INTEGER;
+BEGIN
+    FOR i FROM 1 TO n-1 STEP 1  DO
+        elem := T[i];
+        j:=i;
+        WHILE (j>=0 && T[j-1]>elem) DO
+        T[j-1] := T[j];
+        j:= j-1;
+        END_WHILE
+        elem=T[i-1];    
+    END_FOR
+    RETURN T[n] ;
+END
